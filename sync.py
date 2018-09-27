@@ -1,6 +1,10 @@
 import argparse
 
 
+def start_sync(args):
+    print(args)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='CLI controls how sync behaves')
     parser.add_argument('--src', required=True,
@@ -11,4 +15,4 @@ if __name__ == '__main__':
                         help=('whether the synchronization is bi-directional'))
 
     args = parser.parse_args()
-    print(args)
+    start_sync(args)
